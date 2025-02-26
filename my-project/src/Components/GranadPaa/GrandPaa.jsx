@@ -15,7 +15,10 @@ const GrandPaa = () => {
 
     return (
         <div className="border-2 border-red-200 p-5  mx-auto ">
-            <h1 className="text-4xl mb-10">Grand Paa</h1>
+            <div className="mb-10">
+            <h1 className="text-4xl mb-5">Grand Paa</h1>
+            <button className="border-2 bg-slate-100" onClick={()=>setMoney(money+1000)}>G P M</button>
+            </div>
 
             <div className="flex justify-evenly">
 

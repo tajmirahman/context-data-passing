@@ -1,10 +1,11 @@
 import { useContext } from "react";
-import { GrandPaaAssets } from "../GranadPaa/GrandPaa";
+import { GrandPaaAssets, GrandPaaMoney } from "../GranadPaa/GrandPaa";
 
 
 const Cousin = ({name}) => {
 
-    const gift=useContext(GrandPaaAssets)
+    const gift=useContext(GrandPaaAssets);
+    const money=useContext(GrandPaaMoney)
 
     return (
         <div className="border-2 border-red-200 p-5">
@@ -12,9 +13,11 @@ const Cousin = ({name}) => {
 
             <div>
                 <p >{name}</p>
-                {
-                    name=== 'Mintaha' && <p>GPA-{gift}</p>
-                }
+                
+                    {name=== 'Mintaha' && <p>GPA-{gift}</p>}
+                    {name=== 'Afiya' && <p>GPM-{money}</p>}
+                    {name=== 'Enaira' && <p>GPM-{money}</p>}
+                
             </div>
            
         </div>
